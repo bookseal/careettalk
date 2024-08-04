@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>CareerTalk: Phrase Converter</title>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+   <main>
+     <h1 class="title">CareerTalk<span class="subtitle">Phrase Converter</span></h1>
+     <form id="converterForm">
+       <div class="input-box">
+         <label for="input-type">Select input type:</label>
+         <select id="input-type" name="input-type">
+           <option value="english">English to English</option>
+           <option value="korean">Korean to English</option>
+         </select>
+       </div>
+       <div class="input-box">
+         <label for="sentences">Enter sentences:</label>
+         <textarea id="sentences" name="sentences" placeholder="Enter sentences here, one per line" rows="5"></textarea>
+       </div>
+       <div class="input-box">
+         <label for="context">Job context:</label>
+         <input id="context" name="context" placeholder="e.g., 'software developer', 'artist'" type="text">
+       </div>
+       <button type="submit" class="convert-btn">Convert</button>
+     </form>
+     <div class="output">
+       <table>
+         <thead>
+           <tr>
+             <th>New English Phrase</th>
+             <th>Korean Translation</th>
+           </tr>
+         </thead>
+         <tbody id="outputTable">
+           <!-- Results will appear here -->
+         </tbody>
+       </table>
+     </div>
+   </main>
+ </div>
+ <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-functions.js"></script>
+ <script src="main.js"></script>
+</body>
+</html>
